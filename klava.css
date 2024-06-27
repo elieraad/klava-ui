@@ -10,6 +10,7 @@
     --hover-color: #FF7676;
     --disabled-color: #E4E4E4;
     --error-color: #FF0000;
+    --active-color: #C13527;
 
     /* Typography */
     --font-family: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -89,6 +90,68 @@ button:disabled {
     background-color: var(--disabled-color);
     cursor: not-allowed;
 }
+
+/* Base outline button style */
+.outline-btn {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover and focus state */
+.outline-btn:hover,
+.outline-btn:focus {
+    background: none;
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+}
+
+button.outline-btn:disabled,
+button.outline-btn:disabled:hover,
+button.outline-btn:disabled:focus,
+button.outline-btn:disabled:active {
+    background-color: var(--disabled-color);
+    cursor: not-allowed;
+    color: white;
+    border: none;
+}
+
+
+/* Active state */
+.outline-btn:active {
+    /* Darker shade for active state */
+    color: var(--active-color);
+    border-color: var(--active-color);
+}
+
+/* Base link style */
+a {
+    color: var(--primary-color);
+    /* Airbnb's primary brand color */
+    text-decoration: none;
+    font-weight: 600;
+    /* Slightly bold for emphasis */
+    transition: color 0.2s ease-in-out;
+    /* Smooth transition for color changes */
+}
+
+/* Hover and focus state */
+a:hover,
+a:focus {
+    color: var(--hover-color);
+    /* Darker shade for hover/focus state */
+    text-decoration: underline;
+    /* Underline on hover for better UX */
+}
+
+/* Active links */
+a:active {
+    color: var(--active-color);
+    /* Even darker shade for active state */
+}
+
 
 /* Inputs */
 input,
