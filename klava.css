@@ -273,6 +273,23 @@ label {
     color: var(--primary-color);
 }
 
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav .nav-item {
+        margin: var(--spacing-xs) 0;
+        font-size: var(--font-size-sm);
+    }
+
+    .nav .nav-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
 /* Utility Classes */
 .text-center {
     text-align: center;

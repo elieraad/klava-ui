@@ -4,24 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Klava UI Documentation</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="klava.css" />
     <style>
       /* Additional styles specific to the documentation */
       body {
         line-height: 1.6;
         margin: 20px;
+        background-color: #f3f4f6;
       }
       .container {
         max-width: 800px;
         margin: 0 auto;
-        background-color: #fff;
+        background-color: #f3f4f6;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
 
       pre {
-        background-color: #f4f4f4;
+        background-color: #0f1d3e;
+        color: #f4f4f4;
         padding: 10px;
         overflow: auto;
         border-radius: 5px;
@@ -47,9 +49,11 @@
       <section id="getting-started">
         <h2>Getting Started</h2>
         <p>
-          To get started with Klava UI, include the CSS file in your project:
+          To get started with Klava UI, include the CSS and JS files in your
+          project:
         </p>
-        <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+        <pre><code>&lt;link rel="stylesheet" href="klava.css"&gt;
+&lt;script rel="stylesheet" href="klava.js"&gt;&lt;/script&gt;</code></pre>
       </section>
 
       <section id="components">
@@ -58,8 +62,8 @@
         <div class="component" id="button-component">
           <h3>Button</h3>
           <p>Example usage of the button component:</p>
-          <button class="button">Click Me</button>
-          <button class="button" disabled>Disabled</button>
+          <button>Click Me</button>
+          <button disabled>Disabled</button>
           <pre><code>&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
         </div>
 
@@ -194,6 +198,6 @@
         <p>© 2024 Klava UI. All rights reserved.</p>
       </footer>
     </div>
-    <script src="index.js"></script>
+    <script src="klava.js"></script>
   </body>
 </html>
