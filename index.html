@@ -3,94 +3,197 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Airbnb-inspired Design System</title>
-    <link rel="stylesheet" href="demo.css" />
+    <title>Klava UI Documentation</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Additional styles specific to the documentation */
+      body {
+        line-height: 1.6;
+        margin: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        overflow: auto;
+        border-radius: 5px;
+      }
+      code {
+        font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        font-size: 14px;
+      }
+      .component {
+        margin-bottom: 40px;
+      }
+    </style>
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="#" class="nav-item">Home</a>
-      <a href="#" class="nav-item">About</a>
-      <a href="#" class="nav-item">Services</a>
-      <a href="#" class="nav-item">Contact</a>
-    </nav>
-
-    <!-- Header -->
-    <header class="text-center">
-      <h1>Welcome to the Airbnb-inspired Design System</h1>
-      <h2>Experience a modern UI design</h2>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container">
-      <!-- Card -->
-      <div class="card">
-        <h3>Card Title</h3>
+    <div class="container">
+      <header>
+        <h1>Klava UI Documentation</h1>
         <p>
-          This is a simple card with some text content. It uses the card styles
-          from the CSS.
+          Welcome to the documentation for Klava UI, a lightweight UI library.
         </p>
-        <button id="button">Click Me</button>
-      </div>
+      </header>
 
-      <!-- Form -->
-      <form>
-        <h3>Form Elements</h3>
-        <label for="text-input">Text Input</label>
-        <input type="text" id="text-input" placeholder="Enter text" />
+      <section id="getting-started">
+        <h2>Getting Started</h2>
+        <p>
+          To get started with Klava UI, include the CSS file in your project:
+        </p>
+        <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+      </section>
 
-        <label for="textarea">Textarea</label>
-        <textarea id="textarea" placeholder="Enter more text"></textarea>
+      <section id="components">
+        <h2>Components</h2>
 
-        <label for="select">Select</label>
-        <select id="select">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-        </select>
+        <div class="component" id="button-component">
+          <h3>Button</h3>
+          <p>Example usage of the button component:</p>
+          <button class="button">Click Me</button>
+          <button class="button" disabled>Disabled</button>
+          <pre><code>&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
+        </div>
 
-        <label for="range">Price</label>
-        <input id="range" type="range" min="0" max="100" value="50" />
+        <div class="component" id="button-component">
+          <h3>Input</h3>
+          <p>Example usage of the input component:</p>
+          <input placeholder="Type Something" />
+          <pre><code>&lt;input placeholder="Type Something" /&gt;</code></pre>
+        </div>
 
-        <label for="from">From</label>
-        <input
-          id="from"
-          type="text"
-          class="datepicker-input"
-          placeholder="Staying From"
-        />
+        <div class="component" id="range-slider-component">
+          <h3>Range Slider</h3>
+          <p>Example usage of the range slider component:</p>
+          <input type="range" min="0" max="100" value="50" />
+          <pre><code>&lt;input type="range" min="0" max="100" value="50"&gt;</code></pre>
+        </div>
 
-        <label for="to">To</label>
-        <input
-          id="from"
-          type="text"
-          class="datepicker-input"
-          placeholder="Staying To"
-        />
+        <div class="component" id="button-component">
+          <h3>Navigation</h3>
+          <p>Example usage of the navigation component:</p>
+          <nav class="nav">
+            <a class="nav-item">Home</a>
+            <a class="nav-item">About</a>
+            <a class="nav-item">Services</a>
+            <a class="nav-item">Contact</a>
+          </nav>
 
-        <label> <input type="checkbox" id="checkbox" /> Checkbox </label>
+          <pre><code>&lt;nav class="nav"&gt;
+    &lt;a class="nav-item"&gt;Home&lt;/a&gt;
+    &lt;a class="nav-item"&gt;About&lt;/a&gt;
+    &lt;a class="nav-item"&gt;Services&lt;/a&gt;
+    &lt;a class="nav-item"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
 
-        <label> <input type="radio" name="radio" id="radio1" /> Radio 1 </label>
-        <label> <input type="radio" name="radio" id="radio2" /> Radio 2 </label>
+        <div class="component" id="select-component">
+          <div class="card">
+            <h3>Card Title</h3>
+            <p>
+              This is a simple card with some text content. It uses the card
+              styles from the CSS.
+            </p>
+            <button>Click Me</button>
+          </div>
 
-        <button type="submit">Submit</button>
-      </form>
+          <pre><code>&lt;div class="card"&gt;
+&lt;h3&gt;Card Title&lt;/h3&gt;
+&lt;p&gt;
+    This is a simple card with some text content. It uses the card
+    styles from the CSS.
+&lt;/p&gt;
+&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
+        </div>
 
-      <!-- Dialog -->
-      <div class="dialog-overlay" id="dialog-overlay"></div>
-      <div class="dialog" id="dialog" style="display: none">
-        <h3>Dialog Title</h3>
-        <p>This is a dialog. Click the button to close it.</p>
-        <button id="closeBtn">Close</button>
-      </div>
-    </main>
+        <div class="component" id="select-component">
+          <h3>Select</h3>
+          <p>Example usage of the select component:</p>
+          <select>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+          <pre><code>&lt;select&gt;
+    &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+    &lt;option value="option3"&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
 
-    <!-- Footer -->
-    <footer class="text-center mt-lg">
-      <p>&copy; 2024 Airbnb-inspired Design System</p>
-    </footer>
+        <div class="component" id="datepicker-component">
+          <h3>Datepicker</h3>
+          <p>Example usage of the datepicker component:</p>
+          <input
+            type="text"
+            class="datepicker-input"
+            placeholder="Select a date"
+          />
+          <pre><code>&lt;input class="datepicker-input" placeholder="Select a date"&gt;</code></pre>
+        </div>
 
+        <div class="component" id="radio-checkbox-component">
+          <h3>Radio Buttons and Checkboxes</h3>
+
+          <div>
+            <h4>Radio Buttons</h4>
+            <label>
+              <input type="radio" name="radio-group" value="option1" checked />
+              Option 1 </label
+            ><br />
+            <label>
+              <input type="radio" name="radio-group" value="option2" />
+              Option 2 </label
+            ><br />
+            <label>
+              <input type="radio" name="radio-group" value="option3" />
+              Option 3
+            </label>
+
+            <pre><code>&lt;label for="option1"&gt;Option 1&lt;/label&gt;
+&lt;input id="option1" type="radio" value="option1" /&gt;
+
+&lt;label for="option2"&gt;Option 2&lt;/label&gt;
+&lt;input id="option2" type="radio" value="option2" /&gt;
+</code></pre>
+          </div>
+
+          <div>
+            <h4>Checkboxes</h4>
+            <label>
+              <input type="checkbox" name="checkbox1" value="option1" checked />
+              Option 1 </label
+            ><br />
+            <label>
+              <input type="checkbox" name="checkbox2" value="option2" />
+              Option 2 </label
+            ><br />
+            <label>
+              <input type="checkbox" name="checkbox3" value="option3" />
+              Option 3
+            </label>
+            <pre><code>&lt;label for="option1"&gt;Option 1&lt;/label&gt;
+&lt;input id="option1" type="checkbox" value="option1" /&gt;
+
+&lt;label for="option2"&gt;Option 2&lt;/label&gt;
+&lt;input id="option2" type="checkbox" value="option2" /&gt;
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2024 Klava UI. All rights reserved.</p>
+      </footer>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
