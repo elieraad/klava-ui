@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb-inspired Design System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="#" class="nav-item">Home</a>
+      <a href="#" class="nav-item">About</a>
+      <a href="#" class="nav-item">Services</a>
+      <a href="#" class="nav-item">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center">
+      <h1>Welcome to the Airbnb-inspired Design System</h1>
+      <h2>Experience a modern UI design</h2>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Card -->
+      <div class="card">
+        <h3>Card Title</h3>
+        <p>
+          This is a simple card with some text content. It uses the card styles
+          from the CSS.
+        </p>
+        <button>Click Me</button>
+      </div>
+
+      <!-- Form -->
+      <form>
+        <h3>Form Elements</h3>
+        <label for="text-input">Text Input</label>
+        <input type="text" id="text-input" placeholder="Enter text" />
+
+        <label for="textarea">Textarea</label>
+        <textarea id="textarea" placeholder="Enter more text"></textarea>
+
+        <label for="select">Select</label>
+        <select id="select">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+
+        <label for="date">Date Picker</label>
+        <input type="date" id="date" />
+
+        <label> <input type="checkbox" id="checkbox" /> Checkbox </label>
+
+        <label> <input type="radio" name="radio" id="radio1" /> Radio 1 </label>
+        <label> <input type="radio" name="radio" id="radio2" /> Radio 2 </label>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Dialog -->
+      <div
+        class="dialog-overlay"
+        id="dialog-overlay"
+        style="display: none"
+      ></div>
+      <div class="dialog" id="dialog" style="display: none">
+        <h3>Dialog Title</h3>
+        <p>This is a dialog. Click the button to close it.</p>
+        <button onclick="closeDialog()">Close</button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-lg">
+      <p>&copy; 2024 Airbnb-inspired Design System</p>
+    </footer>
+
+    <script>
+      function closeDialog() {
+        document.getElementById("dialog").style.display = "none";
+        document.getElementById("dialog-overlay").style.display = "none";
+      }
+
+      function openDialog() {
+        document.getElementById("dialog").style.display = "block";
+        document.getElementById("dialog-overlay").style.display = "block";
+      }
+
+      // Example of opening dialog (can be triggered by a button click in real use case)
+      setTimeout(openDialog, 1000);
+    </script>
+  </body>
+</html>
