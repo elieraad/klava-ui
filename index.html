@@ -30,7 +30,7 @@
           This is a simple card with some text content. It uses the card styles
           from the CSS.
         </p>
-        <button>Click Me</button>
+        <button id="button">Click Me</button>
       </div>
 
       <!-- Form -->
@@ -49,8 +49,21 @@
           <option value="option3">Option 3</option>
         </select>
 
-        <label for="date">Date Picker</label>
-        <input type="date" id="date" />
+        <label for="from">From</label>
+        <input
+          id="from"
+          type="text"
+          class="datepicker-input"
+          placeholder="Staying From"
+        />
+
+        <label for="to">To</label>
+        <input
+          id="from"
+          type="text"
+          class="datepicker-input"
+          placeholder="Staying To"
+        />
 
         <label> <input type="checkbox" id="checkbox" /> Checkbox </label>
 
@@ -69,7 +82,7 @@
       <div class="dialog" id="dialog" style="display: none">
         <h3>Dialog Title</h3>
         <p>This is a dialog. Click the button to close it.</p>
-        <button onclick="closeDialog()">Close</button>
+        <button id="closeBtn">Close</button>
       </div>
     </main>
 
@@ -78,19 +91,6 @@
       <p>&copy; 2024 Airbnb-inspired Design System</p>
     </footer>
 
-    <script>
-      function closeDialog() {
-        document.getElementById("dialog").style.display = "none";
-        document.getElementById("dialog-overlay").style.display = "none";
-      }
-
-      function openDialog() {
-        document.getElementById("dialog").style.display = "block";
-        document.getElementById("dialog-overlay").style.display = "block";
-      }
-
-      // Example of opening dialog (can be triggered by a button click in real use case)
-      setTimeout(openDialog, 1000);
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

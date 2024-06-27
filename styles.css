@@ -10,7 +10,7 @@
     --hover-color: #FF7676;
     --disabled-color: #E4E4E4;
     --error-color: #FF0000;
-    
+
     /* Typography */
     --font-family: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     --font-size-base: 16px;
@@ -18,14 +18,14 @@
     --font-size-sm: 14px;
     --font-weight-normal: 400;
     --font-weight-bold: 600;
-    
+
     /* Spacing */
     --spacing-xs: 8px;
     --spacing-sm: 16px;
     --spacing-md: 24px;
     --spacing-lg: 32px;
     --spacing-xl: 40px;
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,12 @@ body {
 }
 
 /* Headers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: var(--font-weight-bold);
     margin: var(--spacing-sm) 0;
 }
@@ -85,7 +90,9 @@ button:disabled {
 }
 
 /* Inputs */
-input, textarea, select {
+input,
+textarea,
+select {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
     color: var(--text-color);
@@ -95,29 +102,94 @@ input, textarea, select {
     margin-bottom: var(--spacing-md);
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
     border-color: var(--primary-color);
 }
 
 /* Checkbox and Radio Buttons */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     accent-color: var(--primary-color);
     margin-right: var(--spacing-xs);
 }
 
-/* Date Picker */
-input[type="date"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding: var(--spacing-sm);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
+.datepicker-container {
+    position: absolute;
+    top: calc(100% - var(--spacing-md));
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+.datepicker-calendar {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
+}
+
+.datepicker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.datepicker-header button {
+    background: none;
+    border: none;
+    font-size: 18px;
     cursor: pointer;
+    outline: none;
+    color: var(--primary-color);
+}
+
+.datepicker-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.datepicker-day {
+    padding: 5px;
+}
+
+.datepicker-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+}
+
+.datepicker-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+.datepicker-date.selected {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+}
+
+.datepicker-date:hover {
+    background-color: #f0f0f0;
 }
 
 /* Cards */
